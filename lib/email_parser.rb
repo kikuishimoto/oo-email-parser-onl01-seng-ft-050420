@@ -5,9 +5,9 @@ class EmailAddressParser
     @email = emails
   end
   def parse
-    erray= @email.split(/[, ]/).uniq!
-    erray.reject!{ |element| element.empty? }
+    erray= @email.split(/[, ]/).uniq!.flatten
     erray
+
   end
 end# Build a class EmailParser that accepts a string of unformatted
 # emails. The parse method on the class should separate them into
