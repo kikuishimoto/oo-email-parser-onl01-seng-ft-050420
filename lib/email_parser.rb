@@ -5,7 +5,8 @@ class EmailAddressParser
     @email = emails
   end
   def parse
-    erray= @email.split(/[, ]/).uniq!.flatten
+    erray= @email.split(/[, ]/).uniq
+    erray.reject! { |element| element.empty? }
     erray
 
   end
